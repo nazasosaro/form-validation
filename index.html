@@ -4,10 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+    <div class="container-form" id="registroForm">
+
+        <h2 class="title-form">Formulario de Registro</h2>
+
+        <form id="formulario">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" minlength="3" required autocomplete="off">
+                        <div class="error" id="errorNombre"></div>
+                    </div>
+                    <div class="col">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido" minlength="3" required autocomplete="off">
+                        <div class="error" id="errorApellido"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="documento">Documento:</label>
+                    <input type="text" class="form-control" id="documento" name="documento" minlength="3" required autocomplete="off">
+                    <div class="error" class="form-control" id="errorDocumento"></div>
+                </div>
+                <div class="col">
+                    <label for="edad">Edad:</label>
+                    <input type="number" class="form-control" id="edad" name="edad" required autocomplete="off">
+                    <div class="error" id="errorEdad"></div>
+                </div>
+            </div>
+
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required autocomplete="off">
+            <div class="error" id="errorEmail"></div>
+
+            <label for="actividad">Actividad</label>
+            <select name="actividad" class="form-control" id="actividad" required autocomplete="off">
+                <option value="">Seleccione..</option>
+                <option value="Tecnologia">Tecnologia</option>
+                <option value="IA">IA</option>
+                <option value="Programacion">Programacion</option>
+                <option value="Automatizacion">Automatizacion</option>
+                <option value="Sistemas">Sistemas</option>
+                <option value="Educacion">Educacion</option>
+            </select>
+            <div class="error" id="errorActividad"></div>
+
+            <label for="nivelEstudio">Nivel de Estudio:</label>
+            <select name="nivelEstudio" class="form-control" id="nivelEstudio" required autocomplete="off">
+                <option value="">Seleccione..</option>
+                <option value="Secundaria">Secundaria</option>
+                <option value="Universitario">Universitario</option>
+                <option value="Universitario Incompleto">Universitario Incompleto</option>
+                <option value="Postgrado">Postgrado</option>
+                <option value="Tecnologia">Tecnologia</option> 
+             </select>
+            <div class="error" id="errorNivelEstudio"></div>
+
+            <label class="inline">
+                <input type="checkbox" name="aceptoTerminos" id="aceptoTerminos" required>
+                Acepto terminos y condiciones
+            </label>
+            <div class="error" id="errorAceptoTerminos"></div>
+
+            <label class="inline">Publicidad</label>
+            <input type="checkbox" name="publicidad" id="publicidad" value="ofertas">
+            <label class="inline">Ofertas</label>
+            <input type="checkbox" name="publicidad" id="novedades" value="novedades">
+            <label class="inline">Novedades</label>
+
+            <input type="submit" class="btn-form" value="Registrarme">
+
+        </form>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
